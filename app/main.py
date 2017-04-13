@@ -19,9 +19,15 @@ def retrieveEC2Info():
             ec2 = boto3.resource('ec2',region_name=r,aws_access_key_id= user_aws_key,aws_secret_access_key= user_secret_key)
             #For each region get all instaces active in that region
             for instance in ec2.instances.all():
+                #Special function for checking names on tags
+                name = "No Name Found"
+                if instance.tags != None:
+                    for tags in instance.tags:
+                        if tags["Key"] == 'Name':
+                            name = tags["Value"]
                 #Pull all required information
                 ec2InstanceInfo = {
-                    'Name': str(instance.tags),
+                    'Name': str(name),
                     'ID': str(instance.id),
                     'Type': str(instance.instance_type),
                     'Region': str(r),
