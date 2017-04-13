@@ -1,0 +1,26 @@
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th class="mdl-data-table__cell--non-numeric">Name</th>
+            <th class="mdl-data-table__cell--non-numeric">ID</th>
+            <th class="mdl-data-table__cell--non-numeric">Type</th>
+            <th class="mdl-data-table__cell--non-numeric">Region</th>
+            <th class="mdl-data-table__cell--non-numeric">Availability Zone</th>
+            <th class="mdl-data-table__cell--non-numeric">State</th>
+            <th class="mdl-data-table__cell--non-numeric">Public IP Address</th>
+            <th class="mdl-data-table__cell--non-numeric">Launch Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="instance in instances">
+            <td class="mdl-data-table__cell--non-numeric">{{instance.Name}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{instance.ID}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{instance.Type}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{instance.Region}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{instance.Zone}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{instance.State}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{instance.Public_IP}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{instance.Launch_Time}}</td>
+        </tr>
+    </tbody>
+</table>
