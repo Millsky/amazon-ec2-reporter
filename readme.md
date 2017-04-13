@@ -26,9 +26,12 @@
 
 ### Container
 
+VIA: https://github.com/tiangolo/uwsgi-nginx-flask-docker
+
+#### NOTE: Will run with the container images default python 3.5 - Code is functional on 2.7
+
 1.) docker build -t ec2-reporter .
 
 2.) docker run -d --name ec2Reporter -p 80:80 ec2-reporter
 
 3.) Navigate to localhost
-
